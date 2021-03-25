@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  trail-task:
+    container_name: trail-task
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8080:8080'
